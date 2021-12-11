@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Red+Hat+Display:wght@400;500&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Red+Hat+Display:wght@400;500&family=Rubik:wght@300;400&display=swap");
 body {
   background-color: #0f1424;
   width: 100%;
@@ -22,7 +22,7 @@ body {
 .main-container .card-user {
   grid-row: 1/span 2;
   width: 250px;
-  height: 475px;
+  height: 500px;
   border-radius: 15px;
   background-color: #1c1f4a;
 }
@@ -42,17 +42,23 @@ body {
 .main-container .card-user .head-user-card span {
   padding-left: 0;
   color: #bdc1ff;
+  margin-top: 25px;
 }
 .main-container .card-user .head-user-card h1 {
   display: block;
   font-weight: 300;
   font-size: 30px;
+  margin-top: 10px;
 }
 .main-container .card-user span {
   display: block;
   padding-left: 25px;
   margin-top: 20px;
   color: #bdc1ff;
+  cursor: pointer;
+}
+.main-container .card-user :hover {
+  color: #FFFFFF;
 }
 .main-container .card-stat {
   width: 250px;
@@ -84,6 +90,7 @@ body {
   text-align: center;
   font-size: 50px;
   margin-top: 20px;
+  font-weight: 300;
 }
 .main-container .card-stat .info-card .pasado {
   margin-top: 10px;
@@ -130,7 +137,10 @@ body {
 
 .attribution {
   font-size: 11px;
+  position: absolute;
+  width: 100%;
   text-align: center;
+  bottom: 5px;
 }
 
 .attribution a {
