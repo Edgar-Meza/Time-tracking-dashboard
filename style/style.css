@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Red+Hat+Display:wght@400;500&family=Rubik&display=swap");
+body {
+  background-color: #0f1424;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.main-container {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  color: #FFFFFF;
+}
+.main-container .card-user {
+  grid-row: 1/span 2;
+  width: 250px;
+  height: 475px;
+  border-radius: 15px;
+  background-color: #1c1f4a;
+}
+.main-container .card-user .head-user-card {
+  background-color: #5847eb;
+  height: 65%;
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.main-container .card-user .head-user-card img {
+  margin-top: 35px;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  width: 60px;
+}
+.main-container .card-user .head-user-card span {
+  padding-left: 0;
+}
+.main-container .card-user .head-user-card h1 {
+  display: block;
+  font-weight: 300;
+  font-size: 30px;
+}
+.main-container .card-user span {
+  display: block;
+  padding-left: 25px;
+  margin-top: 20px;
+}
+.main-container .card-stat {
+  width: 250px;
+  border-radius: 15px;
+  background-color: #1c1f4a;
+  background: red;
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  position: relative;
+}
+.main-container .card-stat .info-card {
+  background: cornflowerblue;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  margin-top: 20%;
+  border-radius: 15px;
+}
+.main-container .card-stat .info-card .title-card {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+.main-container .card-stat .info-card .title-card h2 {
+  display: inline;
+  margin-right: 50%;
+}
+.main-container .card-stat .info-card span {
+  display: block;
+}
+.main-container .card-stat .info-card .actual {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+}
+.main-container .card-stat .info-card .pasado {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
