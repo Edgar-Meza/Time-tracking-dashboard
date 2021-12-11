@@ -1,0 +1,6 @@
+@mixin fondo-card($color, $url) {
+    background-color: $color;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}

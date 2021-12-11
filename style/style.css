@@ -41,6 +41,7 @@ body {
 }
 .main-container .card-user .head-user-card span {
   padding-left: 0;
+  color: #bdc1ff;
 }
 .main-container .card-user .head-user-card h1 {
   display: block;
@@ -51,19 +52,15 @@ body {
   display: block;
   padding-left: 25px;
   margin-top: 20px;
+  color: #bdc1ff;
 }
 .main-container .card-stat {
   width: 250px;
   border-radius: 15px;
-  background-color: #1c1f4a;
-  background: red;
-  background-image: url(../images/icon-work.svg);
-  background-repeat: no-repeat;
-  background-position-x: right;
   position: relative;
 }
 .main-container .card-stat .info-card {
-  background: cornflowerblue;
+  background-color: #1c1f4a;
   position: absolute;
   width: 100%;
   height: 80%;
@@ -78,6 +75,7 @@ body {
 .main-container .card-stat .info-card .title-card h2 {
   display: inline;
   margin-right: 50%;
+  font-size: 20px;
 }
 .main-container .card-stat .info-card span {
   display: block;
@@ -90,6 +88,44 @@ body {
 .main-container .card-stat .info-card .pasado {
   margin-top: 10px;
   margin-left: 25px;
+  color: #bdc1ff;
+  font-size: 15px;
+}
+.main-container .work {
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.main-container .play {
+  background-color: #56c2e6;
+  background-image: url("../images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.main-container .study {
+  background-color: #ff5c7c;
+  background-image: url("../images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.main-container .exercise {
+  background-color: #4acf81;
+  background-image: url("../images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.main-container .social {
+  background-color: #7536d3;
+  background-image: url("../images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.main-container .self-care {
+  background-color: #f1c65b;
+  background-image: url("../images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
 
 .attribution {
