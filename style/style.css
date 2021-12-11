@@ -37,7 +37,7 @@ body {
   margin-top: 35px;
   border: 3px solid #FFFFFF;
   border-radius: 50%;
-  width: 60px;
+  width: 70px;
 }
 .main-container .card-user .head-user-card span {
   padding-left: 0;
@@ -64,6 +64,7 @@ body {
   width: 250px;
   border-radius: 15px;
   position: relative;
+  cursor: pointer;
 }
 .main-container .card-stat .info-card {
   background-color: #1c1f4a;
@@ -83,6 +84,9 @@ body {
   margin-right: 50%;
   font-size: 20px;
 }
+.main-container .card-stat .info-card .title-card img {
+  cursor: pointer;
+}
 .main-container .card-stat .info-card span {
   display: block;
 }
@@ -98,41 +102,50 @@ body {
   color: #bdc1ff;
   font-size: 15px;
 }
+.main-container .card-stat :hover {
+  background-color: #6f76c8;
+}
 .main-container .work {
   background-color: #ff8c66;
   background-image: url("../images/icon-work.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 .main-container .play {
   background-color: #56c2e6;
   background-image: url("../images/icon-play.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 .main-container .study {
   background-color: #ff5c7c;
   background-image: url("../images/icon-study.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 .main-container .exercise {
   background-color: #4acf81;
   background-image: url("../images/icon-exercise.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 .main-container .social {
   background-color: #7536d3;
   background-image: url("../images/icon-social.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 .main-container .self-care {
   background-color: #f1c65b;
   background-image: url("../images/icon-self-care.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: -10px;
 }
 
 .attribution {
