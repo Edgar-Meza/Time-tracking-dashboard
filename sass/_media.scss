@@ -1,0 +1,77 @@
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 33% 33% 33%!important;
+    }
+}
+@media (max-width: 576px) {
+    .main-container {
+        grid-template-columns: 50% 50%!important;
+    }
+}
+@media (max-width: 375px) {
+    .main-container {
+        grid-template-columns: auto!important;
+    }
+    .card-user {
+        width: 100%!important;
+        height: 160px!important;
+        padding-bottom: 10px;
+    }
+    .card-stat {
+        width: 100%!important;
+        height: 160px!important;
+    }
+    .head-user-card {
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        img {
+            width: 55px!important;
+            height: 55px!important;
+            margin-right: 10%;
+            margin-top: 0!important;
+        }
+        .data-user {
+            span {
+
+            }
+            h1 {
+                font-size: 15px!important;
+            }
+        }
+    }
+    .data-user {
+        margin-top: 5%;
+    }
+    .actual {
+        width: 50%;
+        display: inline!important;
+        margin-left: 25px;
+        font-size: 35px!important;
+        margin-top: 10px;
+    }
+    .title-card {
+        margin-bottom: 15px;
+        h2 {
+            margin-right: 60%!important;
+        }
+    }
+    .info-card {
+        margin-top: 12%!important;
+    }
+    .pasado {
+        width: 50%;
+        display: inline!important;
+    }
+    .range {
+        display: flex;
+        justify-content: space-around;
+        span {
+            padding: 0!important;
+        }
+    }
+    .attribution {
+        margin-top: 30px;
+        position: relative!important;
+    }
+}
