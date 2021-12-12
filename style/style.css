@@ -230,6 +230,11 @@ body {
   background-position-y: -10px;
 }
 
+.active {
+  color: #FFFFFF !important;
+  font-weight: bold;
+}
+
 .attribution {
   font-size: 11px;
   margin-top: 20px;
