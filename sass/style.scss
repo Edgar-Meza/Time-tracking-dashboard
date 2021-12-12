@@ -88,6 +88,20 @@ body {
                 img {
                     cursor: pointer;
                 }
+                .individual {
+                    width: 100px;
+                    position: absolute;
+                    right: 0px;
+                    opacity: 0;
+                    background: hsl(235, 46%, 20%);
+                    border-radius: 15px;
+                    span {
+                        border-radius: 15px;
+                    }
+                    span:hover {
+                        background-color: hsl(246, 80%, 60%);
+                    }
+                }
             }
             span {
                 display: block;

@@ -169,6 +169,20 @@ body {
 .main-container .card-stat .info-card .title-card img {
   cursor: pointer;
 }
+.main-container .card-stat .info-card .title-card .individual {
+  width: 100px;
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  background: #1c1f4a;
+  border-radius: 15px;
+}
+.main-container .card-stat .info-card .title-card .individual span {
+  border-radius: 15px;
+}
+.main-container .card-stat .info-card .title-card .individual span:hover {
+  background-color: #5847eb;
+}
 .main-container .card-stat .info-card span {
   display: block;
 }

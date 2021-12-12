@@ -8,7 +8,7 @@ function getAll(){
             var classelement = data[n_element].title;
             var class_element = classelement.toLowerCase().replace(" ","-");
             var item_title = data[n_element].title;
-            container.innerHTML = container.innerHTML+'<section class="card-stat '+class_element+'"><div class="info-card"><div class="title-card"><h2 id="title-'+item_title+'"></h2><img src="images/icon-ellipsis.svg" alt="puntos"></div><span class="actual" id="actual-'+item_title+'"></span><span class="pasado" id="pasado-'+item_title+'"></span></div></section>';
+            container.innerHTML = container.innerHTML+'<section class="card-stat '+class_element+'"><div class="info-card"><div class="title-card"><h2 id="title-'+item_title+'"></h2><img src="images/icon-ellipsis.svg" alt="puntos" onclick="getIndividual(\''+item_title+'\')"><div class="individual" id="unique-'+item_title+'"><span onclick="getUnique(\''+item_title+'\', \'daily\')">daily</span><span onclick="getUnique(\''+item_title+'\', \'weekly\')">weekly</span><span onclick="getUnique(\''+item_title+'\', \'monthly\')">monthly</span></div></div><span class="actual" id="actual-'+item_title+'"></span><span class="pasado" id="pasado-'+item_title+'"></span></div></section>';
         }
         for (var item in data) {
             var tit, act, pas;
@@ -17,7 +17,7 @@ function getAll(){
             pas = document.getElementById('pasado-'+data[item].title);
             tit.innerHTML = data[item].title;
             act.innerHTML = data[item].timeframes.daily.current+'hrs';
-            pas.innerHTML = 'Last Week - '+data[item].timeframes.daily.previous+'hrs';
+            pas.innerHTML = 'Last day - '+data[item].timeframes.daily.previous+'hrs';
         }
     });
 }
@@ -33,13 +33,54 @@ function getByTime(time) {
     .then(res=>res.json())
     .then(data => {
         for (var item in data) {
-            var tit, act, pas;
+            var tit, act, pas, tim;
+            if (time == 'daily') {
+                tim = 'day';
+            } else if (time == 'weekly') {
+                tim = 'week';
+            } else {
+                tim = 'month';
+            }
             tit = document.getElementById('title-'+data[item].title);
             act = document.getElementById('actual-'+data[item].title);
             pas = document.getElementById('pasado-'+data[item].title);
             tit.innerHTML = data[item].title;
             act.innerHTML = data[item].timeframes[time].current+'hrs';
-            pas.innerHTML = 'Last Week - '+data[item].timeframes[time].previous+'hrs';
+            pas.innerHTML = 'Last '+tim+' - '+data[item].timeframes[time].previous+'hrs';
         }
     });
+}
+
+function getIndividual(option) {
+    if(document.getElementById('unique-'+option).style.opacity == '0') {
+        document.getElementById('unique-'+option).style.opacity = '1';
+    } else {
+        document.getElementById('unique-'+option).style.opacity = '0';
+    }
+}
+
+function getUnique(element, time) {
+    fetch(window.location.href+'data.json')
+    .then(res=>res.json())
+    .then(data => {
+        for (var item in data) {
+            var tit, act, pas, tim;
+            if (time == 'daily') {
+                tim = 'day';
+            } else if (time == 'weekly') {
+                tim = 'week';
+            } else {
+                tim = 'month';
+            }
+            if (data[item].title == element) {
+                tit = document.getElementById('title-'+element);
+                act = document.getElementById('actual-'+element);
+                pas = document.getElementById('pasado-'+element);
+                tit.innerHTML = data[item].title;
+                act.innerHTML = data[item].timeframes[time].current+'hrs';
+                pas.innerHTML = 'Last '+tim+' - '+data[item].timeframes[time].previous+'hrs';
+            }
+        }
+    });
+    document.getElementById('unique-'+element).style.opacity = '0';
 }
