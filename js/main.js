@@ -9,13 +9,15 @@ function getAll(){
             var class_element = classelement.toLowerCase().replace(" ","-");
             var item_title = data[n_element].title;
             var item_title_s = item_title.replace(" ", "-");
-            container.innerHTML = container.innerHTML+'<section class="card-stat '+class_element+'"><div class="info-card"><div class="title-card"><h2 id="title-'+item_title+'"></h2><img src="images/icon-ellipsis.svg" alt="puntos" onclick="getIndividual(\''+item_title+'\')"><div class="individual" id="unique-'+item_title+'"><span onclick="getUnique(\''+item_title+'\', \'daily\')">daily</span><span onclick="getUnique(\''+item_title+'\', \'weekly\')">weekly</span><span onclick="getUnique(\''+item_title+'\', \'monthly\')">monthly</span></div></div><span class="actual" id="actual-'+item_title_s+'"></span><span class="pasado" id="pasado-'+item_title_s+'"></span></div></section>';
+            container.innerHTML = container.innerHTML+'<section class="card-stat '+class_element+'"><div class="info-card"><div class="title-card"><h2 id="title-'+item_title_s+'"></h2><img src="images/icon-ellipsis.svg" alt="puntos" onclick="getIndividual(\''+item_title+'\')"><div class="individual" id="unique-'+item_title+'"><span onclick="getUnique(\''+item_title+'\', \'daily\')">daily</span><span onclick="getUnique(\''+item_title+'\', \'weekly\')">weekly</span><span onclick="getUnique(\''+item_title+'\', \'monthly\')">monthly</span></div></div><span class="actual" id="actual-'+item_title_s+'"></span><span class="pasado" id="pasado-'+item_title_s+'"></span></div></section>';
         }
         for (var item in data) {
             var tit, act, pas;
-            tit = document.getElementById('title-'+data[item].title);
-            act = document.getElementById('actual-'+data[item].title);
-            pas = document.getElementById('pasado-'+data[item].title);
+            var item_title = data[item].title;
+            var item_title_s = item_title.replace(" ", "-");
+            tit = document.getElementById('title-'+item_title_s);
+            act = document.getElementById('actual-'+item_title_s);
+            pas = document.getElementById('pasado-'+item_title_s);
             tit.innerHTML = data[item].title;
             act.innerHTML = data[item].timeframes.daily.current+'hrs';
             pas.innerHTML = 'Last day - '+data[item].timeframes.daily.previous+'hrs';
@@ -42,9 +44,11 @@ function getByTime(time) {
             } else {
                 tim = 'month';
             }
-            tit = document.getElementById('title-'+data[item].title);
-            act = document.getElementById('actual-'+data[item].title);
-            pas = document.getElementById('pasado-'+data[item].title);
+            var item_title = data[item].title;
+            var item_title_s = item_title.replace(" ", "-");
+            tit = document.getElementById('title-'+item_title_s);
+            act = document.getElementById('actual-'+item_title_s);
+            pas = document.getElementById('pasado-'+item_title_s);
             tit.innerHTML = data[item].title;
             act.innerHTML = data[item].timeframes[time].current+'hrs';
             pas.innerHTML = 'Last '+tim+' - '+data[item].timeframes[time].previous+'hrs';
@@ -74,9 +78,11 @@ function getUnique(element, time) {
                 tim = 'month';
             }
             if (data[item].title == element) {
-                tit = document.getElementById('title-'+element);
-                act = document.getElementById('actual-'+element);
-                pas = document.getElementById('pasado-'+element);
+                var item_title = data[item].title;
+                var item_title_s = item_title.replace(" ", "-");
+                tit = document.getElementById('title-'+item_title_s);
+                act = document.getElementById('actual-'+item_title_s);
+                pas = document.getElementById('pasado-'+item_title_s);
                 tit.innerHTML = data[item].title;
                 act.innerHTML = data[item].timeframes[time].current+'hrs';
                 pas.innerHTML = 'Last '+tim+' - '+data[item].timeframes[time].previous+'hrs';
