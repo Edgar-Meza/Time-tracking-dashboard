@@ -187,8 +187,8 @@ body {
   display: block;
 }
 .main-container .card-stat .info-card .actual {
-  text-align: center;
-  font-size: 50px;
+  margin-left: 25px;
+  font-size: 60px;
   margin-top: 20px;
   font-weight: 300;
 }
@@ -255,6 +255,7 @@ body {
   width: 100%;
   text-align: center;
   bottom: 5px;
+  color: #FFFFFF;
 }
 
 .attribution a {
