@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <main class="main-container">
+  <main class="main-container" id="container">
     <section class="card-user">
       <div class="head-user-card">
         <img src="images/image-jeremy.png" alt="people">
@@ -21,69 +21,9 @@
         </div>
       </div>
       <div class="range">
-        <span>Daily</span>
-        <span>Weekly</span>
-        <span>Monthly</span>
-      </div>
-    </section>
-    <section class="card-stat work">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
-      </div>
-    </section>
-    <section class="card-stat play">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
-      </div>
-    </section>
-    <section class="card-stat study">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
-      </div>
-    </section>
-    <section class="card-stat exercise">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
-      </div>
-    </section>
-    <section class="card-stat social">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
-      </div>
-    </section>
-    <section class="card-stat self-care">
-      <div class="info-card">
-        <div class="title-card">
-          <h2>Work</h2>
-          <img src="images/icon-ellipsis.svg" alt="puntos">
-        </div>
-        <span class="actual">32hrs</span>
-        <span class="pasado">Last Week - 36hrs</span>
+        <span onclick="getByTime('daily')">Daily</span>
+        <span onclick="getByTime('weekly')">Weekly</span>
+        <span onclick="getByTime('monthly')">Monthly</span>
       </div>
     </section>
   </main>  
